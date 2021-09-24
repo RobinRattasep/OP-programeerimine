@@ -1,30 +1,31 @@
-console.log("test");
-//COMMENT
-/*Comment
-two*/
-//Muutuja mille sisu saab muuta
-let name = "Robin Rattasep";
+//Andmetüübid
 
-name = "Kadi Lepp";
+//Primitives
 
-let firstName = "Kadi"
+//tekst
+const name = "Kadi Tamm";
 
-// muutuja mis on konstantne
-const surName = "Tamm";
-//surName = "Lepp";
+// numbrid
+const age = 15;
+const height = 1.75;
 
+//Tõeväärtused - true ja false
+const hasKids = false;
 
-//massiivid
-const numbers = [1, 2, 3, 4];
-numbers.push(6);
+//null
+const hasAirplane = null;
 
-//objektid
+let test;
+
+//Reference types
+//massiiv
+const hobbies = ["Music", "Sport"];
+//object
 const person = {
-	nimi: "Kadi",
-	vanus: 20
+	name: "Kadi",
+	age: 15
 };
 
-person.vanus = 21;
-
-console.log(numbers)
-console.log(person);
+const today = new Date();
+console.log(today);
+console.log(typeof today);
