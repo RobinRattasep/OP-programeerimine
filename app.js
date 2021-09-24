@@ -1,40 +1,25 @@
-//Tüübiteisenudsed
-
+const num1 = 100;
+const num2 = 50;
 
 let val;
 
-//number -> string
+//Matemaatilised tehted
+val = num1 + num2;
+val = num1 - num2;
+val = num1 * num2;
+val = num1 / num2;
+val = num1 % num2;
 
-val = String(555);
-val = String(4+4);
-val = String(5.8);
+//math
+val = Math.PI
+val = Math.round(2.4);
+val = Math.ceil(2.4);
+val = Math.floor(2.8);
+val = Math.sqrt(64);
+val = Math.abs(-3);
+val = Math.pow(4, 2);
 
-// boolean -> String
-val = String(true);
-val = String(false);
-
-//object -> string
-val = String(new Date());
-
-// array -> string
-val = String([1, 2, 3, 4]);
-
-//toString()
-val = (5).toString();
-
-// string to number
-val = Number("5");
-val = Number("5.6");
-val = Number(true);
-val = Number(false);
-val = Number(null);
-val = Number("tere");
-val = Number([1, 2, 3, 4]);
+val = Math.floor(Math.random() * 10);
 
 
-
-
-
-
-console.log(typeof val);
-console.log(val);
+console.log(val)
