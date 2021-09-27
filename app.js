@@ -1,32 +1,34 @@
-
-
-let day = new Date(12/14/2021);
-let daynr = day.getDay();
-
-console.log(daynr);
-switch(daynr){
-	case 0:
-		console.log("Pühapäev");
-		break;
-	case 1:
-		console.log("Esmaspäev");
-		break;
-	case 2:
-		console.log("Teisipäev");
-		break;
-	case 3:
-		console.log("Kolmapäev");
-		break;
-	case 4:
-		console.log("Neljapäev");
-		break;
-	case 5:
-		console.log("Reede");
-		break;
-	case 6:
-		console.log("Laupäev");
-		break;
-	case 7:
-		console.log("Pühapäev");
-		break;
+// tsükkel
+for(let i = 0; i < 10; i ++){
+	if(i % 2 === 0)
+	console.log(i);
 }
+
+for(let i = 0; i < 10; i ++){
+	if(i === 5)
+		continue;
+	console.log(i);
+}
+
+let i = 0;
+while(i < 10){
+	console.log(i);
+	i++;
+}
+
+let j = 0;
+do {
+	console.log(j);
+	j++;
+} while(j<10);
+
+// tsükkel ja massiivid
+const cars = ["ford", "honda", "toyota"];
+for(let i = 0; i < cars.length; i++){
+	console.log(cars[i]);
+}
+
+//foreach-iga
+cars.forEach(function(car, index){
+	console.log(`${index} - ${car}`)
+});
