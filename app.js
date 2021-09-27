@@ -1,24 +1,27 @@
-// Objektide töötlus
-const person = {
-	firstname: "Kadi",
-	lastname: "Tamm",
-	age: 23,
-	email: "Kadi.Tamm@gmail.com",
-	hobbies: ["muusicka", "sport"],
-	address: {
-		city: "Tallinn",
-		country: "Harjumaa"
-	},
-	getBirthdayYear: function(){
-		return 2021 - this.age;
-	}
-};
+const today = new Date();
+val = today.getMonth(); // Jaanurar - 0
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+birthday = new Date("10/02/2021 12:00:42");
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(2020);
+birthday.setHours("17");
+birthday.setMinutes(30);
+birthday.setSeconds(40);
+birthday.setMilliseconds(15);
 
-let val;
-val = person.firstname;
-val = person["lastname"];
-val = person.age;
-val = person.hobbies[1];
-val = person.address.city;
 
-console.log(val);
+
+
+
+
+console.log(birthday);
+
+console.log(val)
