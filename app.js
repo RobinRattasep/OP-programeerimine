@@ -1,47 +1,32 @@
-/*
-if(tingumus){
-	//tegevused if puhul
-	
-}	else {
-	// tegevused else puhul
-}
-*/
-
-const id = 100;
-// võrdub - ==
-// võrdub + tüübikontroll - ===
-if(id == 100){
-	console.log("Okei");
-} else {
-	console.log("Ei ole okei");
-}
-let testId;
-if(typeof testId !== "undefined"){
-	console.log("ID is OK");
-} else { 
-console.log("ID does not exist");
-}
-
-// < ja >
-if(id>100){
-	console.log("ID is greater than 100");
-} else {
-	console.log("ID is equal or less than 100");
-}
-
-let color = "yellow";
-if(color == "red"){
-	console.log("STOP");
-}else if(color == "yellow"){
-	console.log("Attention");
-}else if(color =="green"){
-	console.log("GO");
-}
 
 
+let day = new Date(12/14/2021);
+let daynr = day.getDay();
 
-let name = "Kadi";
-let age = 8;
-if(age > 0 && age <=12){
-	console.log(`${name} on lapse`)
+console.log(daynr);
+switch(daynr){
+	case 0:
+		console.log("Pühapäev");
+		break;
+	case 1:
+		console.log("Esmaspäev");
+		break;
+	case 2:
+		console.log("Teisipäev");
+		break;
+	case 3:
+		console.log("Kolmapäev");
+		break;
+	case 4:
+		console.log("Neljapäev");
+		break;
+	case 5:
+		console.log("Reede");
+		break;
+	case 6:
+		console.log("Laupäev");
+		break;
+	case 7:
+		console.log("Pühapäev");
+		break;
 }
