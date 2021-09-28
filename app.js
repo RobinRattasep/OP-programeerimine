@@ -1,34 +1,45 @@
-// tsükkel
-for(let i = 0; i < 10; i ++){
-	if(i % 2 === 0)
-	console.log(i);
+/*deklareerimine
+function greeting(firstname, lastname){
+	if(typeof firstname === "undefined"){
+		firstname = "Robin";
+	}
+	if(typeof lastname === "undefined"){
+		lastname = "Rattasep";
+	}
+	return "Tere, " + firstname + " " + lastname;
 }
+//kasutamine
+console.log(greeting())
 
-for(let i = 0; i < 10; i ++){
-	if(i === 5)
-		continue;
-	console.log(i);
-}
+// f-on defineeritud nagu const
+const square = function(number = 3){
+	return Math.pow(number, 2);
 
-let i = 0;
-while(i < 10){
-	console.log(i);
-	i++;
-}
+};
+console.log(square())
+*/
 
-let j = 0;
-do {
-	console.log(j);
-	j++;
-} while(j<10);
+(function(){
+	console.log("Funktsion is working");
+})();
 
-// tsükkel ja massiivid
-const cars = ["ford", "honda", "toyota"];
-for(let i = 0; i < cars.length; i++){
-	console.log(cars[i]);
-}
+(function(name){
+	console.log("Tere, " + name);
+})("Robin");
 
-//foreach-iga
-cars.forEach(function(car, index){
-	console.log(`${index} - ${car}`)
-});
+const todoList = {
+	add: function(task){
+		console.log("Task is added");
+	},
+	edit: function(oldtask, newtask){
+		console.log(`${oldtask} on muudetud = ${newtask}`);
+	},
+	delete: function(task){
+		console.log(task + `is deleted`);
+	}
+};
+
+
+todoList.add("Study JS");
+todoList.edit("Studi JS", "Study Typescrpt");
+todoList.delete("Study JS");
