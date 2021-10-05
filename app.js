@@ -1,25 +1,18 @@
-let val;
+const form = document.querySelector('form');
+const taskInput = document.querySelector('#task');
+form.addEventListener('submit', addTask);
 
-val = document;
-val = document.all;
-val = document.all[4];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
-
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].method;
-val = document.forms[0].action;
-val = document.forms[0].id;
-
-val = document.links;
-
-val = document.scripts;
-
-console.log(val)
+function addTask(e) {
+	const li = document.createElement('li');
+	const list = document.querySelector('ul');
+	li.className = 'collection-item';
+	li.appendChild(document.createTextNode(taskInput.value));
+	const link = document.createElement('a');
+	link.className = 'secondary-content';
+	link.appendChild(document.createTextNode('x'));
+	link.setAttribute('href', '#');
+	li.appendChild(link);
+	list.appendChild(li);
+	taskInput.value = '';
+	e.preventDefault();
+}
