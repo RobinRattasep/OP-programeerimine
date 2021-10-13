@@ -5,13 +5,17 @@ const delAllBtn = document.querySelector('#del-tasks');
 const clearBtn = document.querySelector('#clear-tasks');
 
 // page reloading event - lehe taaskäivitamine
-document.addEventListener('DOMContentLoaded', getTasks);
+document.addEventListener('DOMContentLoaded', getTasksFromLS);
+
+const filterInput = document.querySelector(`#filter`)
 
 
 // click elemendi kustutamiseks
 taskList.addEventListener('click', deleteTask);
 
 delAllBtn.addEventListener('click', deleteTasks);
+
+filterInput.addEventListener(`keyup`, filterTasks);
 
 // form submit event
 form.addEventListener('submit', addTask);
@@ -117,3 +121,17 @@ function getTasksFromLS(e) {
 }
 
 
+
+
+function filterTasks(e){
+	const text = e.target.value.toLowerCase();
+	const tasks = document.querySelectorAll(`li`);
+	tasks.forEach(function(li){
+		const task = li.firstChild.textContent.toLowerCase();
+		if(task.indexOf(text != -1)){
+			li.style.display = `block`;
+		}else {
+			li.style.display = `none`;
+		}
+	});
+}
