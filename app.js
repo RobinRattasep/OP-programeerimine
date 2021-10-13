@@ -4,6 +4,8 @@ const taskInput = document.querySelector('#task');
 const delAllBtn = document.querySelector('#del-tasks');
 const clearBtn = document.querySelector('#clear-tasks');
 
+// page reloading event - lehe taaskäivitamine
+document.addEventListener('DOMContentLoaded', getTasks);
 
 
 // click elemendi kustutamiseks
@@ -90,3 +92,28 @@ function removeTaskFromLocalStorage(task) {
   });
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
+
+function getTasksFromLS(e) {
+  let tasks;
+  if(localStorage.getItem('tasks') === null){
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+  tasks.forEach(function(taskselement){
+  	const li = document.createElement('li');
+	li.className = 'collection-item';
+	li.appendChild(document.createTextNode(taskselement));
+	
+	const link = document.createElement('a');
+	link.className = 'secondary-content';
+	link.appendChild(document.createTextNode('X'));
+	link.setAttribute('href', '#');
+	li.appendChild(link);
+
+	taskList.appendChild(li);
+  });
+}
+
+
