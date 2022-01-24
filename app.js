@@ -1,7 +1,8 @@
 const taskList = document.querySelector('ul');
 const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
-const delAllBtn = document.querySelector('#del-tasks');
+const autorInput = document.querySelector('#autor');
+const isbnInput = document.querySelector('#isbn');
 const clearBtn = document.querySelector('#clear-tasks');
 
 // page reloading event - lehe taaskäivitamine
@@ -13,9 +14,7 @@ const filterInput = document.querySelector(`#filter`)
 // click elemendi kustutamiseks
 taskList.addEventListener('click', deleteTask);
 
-delAllBtn.addEventListener('click', deleteTasks);
 
-filterInput.addEventListener(`keyup`, filterTasks);
 
 // form submit event
 form.addEventListener('submit', addTask);
@@ -24,6 +23,8 @@ function addTask(e) {
 	const li = document.createElement('li');
 	li.className = 'collection-item';
 	li.appendChild(document.createTextNode(taskInput.value));
+	li.appendChild(document.createTextNode(autorInput.value));
+	li.appendChild(document.createTextNode(isbnInput.value));
 	
 	const link = document.createElement('a');
 	link.className = 'secondary-content';
